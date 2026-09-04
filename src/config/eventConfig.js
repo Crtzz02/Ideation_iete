@@ -32,11 +32,10 @@ export const eventConfig = {
   // Section 03: About The Event
   about: {
     badge: "HUMAN × AI ERA",
-    heading: "Where Visionary Ideas Transform Into Future Breakthroughs",
+    heading: "Where Visionary Ideas Become Breakthroughs",
     paragraphs: [
-      "IDEATION is the flagship Idea Presentation Competition hosted by the Institution of Electronics and Telecommunication Engineers (IETE). It offers an empowering stage for student innovators, tech thinkers, and problem solvers to pitch original concepts before a panel of esteemed industry leaders, researchers, and venture mentors.",
-      "Whether you have a breakthrough concept in Artificial Intelligence, Healthcare, Sustainable Robotics, or Smart Infrastructure, IDEATION provides the platform, mentorship, and visibility needed to turn your draft into reality.",
-      "Open to all branches and years of study across all recognized institutions. Bring your passion, refine your presentation, and compete for exciting cash prizes and incubation support!"
+      "IDEATION is IETE's flagship Idea Presentation Competition where student innovators pitch groundbreaking tech concepts before industry experts.",
+      "Open to all branches and years. Turn your draft into reality, earn national recognition, and compete for ₹50,000+ in prizes and incubation support."
     ],
     highlights: [
       { number: "₹50,000+", label: "Prize Pool & Grants" },
