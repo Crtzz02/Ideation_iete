@@ -41,10 +41,36 @@ export const Footer = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#FFFFFF'
+                color: '#FFFFFF',
+                flexShrink: 0
               }}>
                 <Cpu size={20} />
               </div>
+
+              {/* IETE logo2 badge, matching Navbar's circular logo container */}
+              <div style={{
+                width: '36px',
+                height: '36px',
+                padding: '2px',
+                background: '#FFFFFF',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: '0 0 10px rgba(0, 200, 255, 0.35)',
+                flexShrink: 0
+              }}>
+                <img
+                  src="/logo2.png"
+                  alt="IETE"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain'
+                  }}
+                />
+              </div>
+
               <div className="font-heading" style={{ fontSize: '1.2rem', fontWeight: 800, color: '#FFFFFF' }}>
                 {eventConfig.eventName}
               </div>

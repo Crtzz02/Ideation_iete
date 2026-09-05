@@ -83,6 +83,31 @@ export const AboutSection = () => {
             position: 'relative',
             overflow: 'hidden'
           }}>
+            {/* IETE logo2 badge, no white background */}
+            {/* IETE logo3 badge, white circular background */}
+<div style={{
+  width: '64px',
+  height: '64px',
+  padding: '4px',
+  background: '#FFFFFF',
+  borderRadius: '50%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  margin: '0 auto 1rem auto',
+  boxShadow: '0 0 20px rgba(0, 200, 255, 0.45)'
+}}>
+  <img
+    src="/logo2.png"
+    alt="IETE"
+    style={{
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain'
+    }}
+  />
+</div>
+
             <div style={{
               width: '72px',
               height: '72px',
@@ -120,7 +145,7 @@ export const AboutSection = () => {
               color: 'var(--text-muted)',
               lineHeight: 1.6
             }}>
-              IETE is India’s leading recognized professional society devoted to the advancement of Electronics, Telecommunication, Information Technology, and Computer Science.
+              IETE is India's leading recognized professional society devoted to the advancement of Electronics, Telecommunication, Information Technology, and Computer Science.
             </p>
 
             <div style={{

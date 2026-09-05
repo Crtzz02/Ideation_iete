@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Cpu, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 import { eventConfig } from '../config/eventConfig';
 
 export const Navbar = () => {
@@ -26,7 +26,7 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`glass-nav`}
+      className="glass-nav"
       style={{
         position: 'sticky',
         top: 0,
@@ -36,59 +36,106 @@ export const Navbar = () => {
         background: scrolled ? 'rgba(7, 9, 19, 0.92)' : 'rgba(7, 9, 19, 0.75)'
       }}
     >
-      <div className="container" style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        height: '76px'
-      }}>
-        {/* Brand Logo */}
-        <a href="#" style={{
+      <div
+        className="container"
+        style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '0.75rem',
-          textDecoration: 'none'
-        }}>
-          <div style={{
-            width: '42px',
-            height: '42px',
-            borderRadius: '12px',
-            background: 'linear-gradient(135deg, #1A5CFF, #00C8FF)',
+          justifyContent: 'space-between',
+          height: '76px'
+        }}
+      >
+        {/* Brand Logos & Title */}
+        <a
+          href="#"
+          style={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: '0 0 20px rgba(0, 200, 255, 0.4)',
-            color: '#FFFFFF'
-          }}>
-            <Cpu size={24} />
+            gap: '0.75rem',
+            textDecoration: 'none'
+          }}
+        >
+          {/* SIES GST Logo Container */}
+          <div
+            style={{
+              height: '42px',
+              padding: '2px 6px',
+              background: '#FFFFFF',
+              borderRadius: '8px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            <img
+              src="/sieslogo.png"
+              alt="SIES GST"
+              style={{
+                height: '100%',
+                width: 'auto',
+                objectFit: 'contain'
+              }}
+            />
           </div>
+
+          {/* IETE Logo Container */}
+          <div
+            style={{
+               width: '64px',
+               height: '64px',
+               display: 'flex',
+               alignItems: 'center',
+               justifyContent: 'center',
+               margin: '0 auto 1rem auto',
+               filter: 'drop-shadow(0 0 12px rgba(0, 200, 255, 0.45))'
+            }}
+          >
+            <img
+              src="/logo3.png"
+              alt="IETE"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'contain'
+              }}
+            />
+          </div>
+
+          {/* Titles */}
           <div>
-            <div className="font-heading" style={{
-              fontSize: '1.25rem',
-              fontWeight: 800,
-              color: '#FFFFFF',
-              lineHeight: 1.1
-            }}>
+            <div
+              className="font-heading"
+              style={{
+                fontSize: '1.25rem',
+                fontWeight: 800,
+                color: '#FFFFFF',
+                lineHeight: 1.1
+              }}
+            >
               {eventConfig.eventName}
             </div>
-            <div style={{
-              fontSize: '0.68rem',
-              color: 'var(--cyber-cyan)',
-              fontWeight: 600,
-              letterSpacing: '0.08em'
-            }}>
+            <div
+              style={{
+                fontSize: '0.68rem',
+                color: 'var(--cyber-cyan)',
+                fontWeight: 600,
+                letterSpacing: '0.08em'
+              }}
+            >
               {eventConfig.organizer}
             </div>
           </div>
         </a>
 
         {/* Desktop Nav Links */}
-        <nav style={{
-          display: 'none',
-          alignItems: 'center',
-          gap: '2rem',
-          '@media (min-width: 900px)': { display: 'flex' }
-        }} className="desktop-nav">
+        <nav
+          style={{
+            display: 'none',
+            alignItems: 'center',
+            gap: '2rem'
+          }}
+          className="desktop-nav"
+        >
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -110,7 +157,7 @@ export const Navbar = () => {
         </nav>
 
         {/* Desktop Register CTA */}
-        <div style={{ display: 'none', '@media (min-width: 900px)': { display: 'flex' } }} className="desktop-nav">
+        <div style={{ display: 'none' }} className="desktop-nav">
           <a href="#register" className="btn-primary">
             Register Now
             <ArrowRight size={16} />
@@ -140,14 +187,16 @@ export const Navbar = () => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div style={{
-          background: 'rgba(7, 9, 19, 0.98)',
-          borderBottom: '1px solid var(--border-light)',
-          padding: '1.5rem',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '1.2rem'
-        }}>
+        <div
+          style={{
+            background: 'rgba(7, 9, 19, 0.98)',
+            borderBottom: '1px solid var(--border-light)',
+            padding: '1.5rem',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1.2rem'
+          }}
+        >
           {navLinks.map((link) => (
             <a
               key={link.name}
