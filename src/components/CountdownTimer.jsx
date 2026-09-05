@@ -67,8 +67,8 @@ export const CountdownTimer = () => {
           }}>
             {timeLeft.isLive ? (
               <>
-                <Radio size={16} style={{ color: '#FF3366' }} className="animate-pulse-glow" />
-                <span style={{ color: '#FF3366' }}>EVENT STATUS</span>
+                <Radio size={16} style={{ color: '#FF2A6D' }} className="animate-pulse-glow" />
+                <span style={{ color: '#FF2A6D', fontWeight: 800, letterSpacing: '0.12em' }}>🔴 LIVE NOW</span>
               </>
             ) : (
               <>
@@ -80,12 +80,29 @@ export const CountdownTimer = () => {
 
           {timeLeft.isLive ? (
             <div style={{
-              fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
-              fontWeight: 800,
-              color: 'var(--gold-amber)',
-              padding: '1rem 0'
+              padding: '1.5rem 1rem',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.8rem'
             }}>
-              🔥 The Event is LIVE! Join us now.
+              <div className="font-heading" style={{
+                fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)',
+                fontWeight: 900,
+                color: '#FF2A6D',
+                textShadow: '0 0 20px rgba(255, 42, 109, 0.6)'
+              }}>
+                🔥 IDEATION '26 IS LIVE NOW!
+              </div>
+              <p style={{
+                color: '#E2E8F0',
+                fontSize: '1.1rem',
+                margin: 0,
+                fontWeight: 600
+              }}>
+                The event is taking place today at <strong style={{ color: 'var(--cyber-cyan)' }}>GST Auditorium, SIES GST, Nerul</strong>.
+              </p>
             </div>
           ) : (
             <div style={{

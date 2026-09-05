@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Clock, ArrowRight, Sparkles, Download, Award, ShieldAlert } from 'lucide-react';
+import { Calendar, MapPin, Clock, ArrowRight, Sparkles, Download } from 'lucide-react';
 import { eventConfig } from '../config/eventConfig';
 
 export const Hero = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Lightbulb, Users, ShieldCheck, Sparkles, Award } from 'lucide-react';
+import { Target, Lightbulb, Users, ShieldCheck, Sparkles } from 'lucide-react';
 import { eventConfig } from '../config/eventConfig';
 
 export const AboutSection = () => {
@@ -13,7 +13,7 @@ export const AboutSection = () => {
     {
       icon: Target,
       title: "Why Participate?",
-      description: "Gain direct feedback from industry veterans, compete for ₹50,000+ in prizes, unlock 1:1 incubation assistance, and earn verified national IETE certificates.",
+      description: "Gain direct feedback from industry veterans, compete for our official prize pool, unlock mentorship, and earn verified national IETE certificates.",
       color: "var(--gold-amber)"
     },
     {
@@ -83,44 +83,28 @@ export const AboutSection = () => {
             position: 'relative',
             overflow: 'hidden'
           }}>
-            {/* IETE logo2 badge, no white background */}
-            {/* IETE logo3 badge, white circular background */}
-<div style={{
-  width: '64px',
-  height: '64px',
-  padding: '4px',
-  background: '#FFFFFF',
-  borderRadius: '50%',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  margin: '0 auto 1rem auto',
-  boxShadow: '0 0 20px rgba(0, 200, 255, 0.45)'
-}}>
-  <img
-    src="/logo2.png"
-    alt="IETE"
-    style={{
-      width: '100%',
-      height: '100%',
-      objectFit: 'contain'
-    }}
-  />
-</div>
-
+            {/* IETE logo badge */}
             <div style={{
               width: '72px',
               height: '72px',
-              borderRadius: '20px',
-              background: 'linear-gradient(135deg, var(--electric-blue), var(--cyber-cyan))',
+              padding: '6px',
+              background: '#FFFFFF',
+              borderRadius: '50%',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 1.5rem auto',
-              boxShadow: '0 0 30px rgba(0, 200, 255, 0.5)',
-              color: '#FFFFFF'
+              boxShadow: '0 0 25px rgba(0, 200, 255, 0.45)'
             }}>
-              <Award size={36} />
+              <img
+                src="/logo2.png"
+                alt="IETE"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain'
+                }}
+              />
             </div>
 
             <h3 className="font-heading" style={{

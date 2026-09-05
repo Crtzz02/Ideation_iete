@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, ArrowUp } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { eventConfig } from '../config/eventConfig';
 
 export const Footer = () => {
@@ -33,25 +33,11 @@ export const Footer = () => {
               gap: '0.75rem',
               marginBottom: '0.8rem'
             }}>
+              {/* IETE logo badge */}
               <div style={{
-                width: '36px',
-                height: '36px',
-                borderRadius: '10px',
-                background: 'linear-gradient(135deg, #1A5CFF, #00C8FF)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#FFFFFF',
-                flexShrink: 0
-              }}>
-                <Cpu size={20} />
-              </div>
-
-              {/* IETE logo2 badge, matching Navbar's circular logo container */}
-              <div style={{
-                width: '36px',
-                height: '36px',
-                padding: '2px',
+                width: '38px',
+                height: '38px',
+                padding: '3px',
                 background: '#FFFFFF',
                 borderRadius: '50%',
                 display: 'flex',

@@ -1,37 +1,8 @@
-import React, { useState } from 'react';
-import { 
-  Activity, 
-  GraduationCap, 
-  Globe, 
-  Cpu, 
-  Building2, 
-  ShieldCheck, 
-  Search, 
-  ChevronRight, 
-  Sparkles,
-  Layers
-} from 'lucide-react';
+import React from 'react';
+import { Layers, Lock, Sparkles, Calendar } from 'lucide-react';
 import { eventConfig } from '../config/eventConfig';
 
-const iconMap = {
-  Activity,
-  GraduationCap,
-  Globe,
-  Cpu,
-  Building2,
-  ShieldCheck
-};
-
 export const TracksSection = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedTrack, setSelectedTrack] = useState(null);
-
-  const filteredTracks = eventConfig.tracks.filter(track => 
-    track.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    track.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    track.sampleTopics.some(topic => topic.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
-
   return (
     <section style={{
       padding: '5rem 0',
@@ -40,190 +11,133 @@ export const TracksSection = () => {
       <div className="container">
         
         {/* Section Header */}
-        <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 3rem auto' }}>
+        <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 2.5rem auto' }}>
           <div className="badge-tag" style={{ marginBottom: '0.8rem' }}>
             <Layers size={14} />
-            <span>Section 04 • Problem Tracks</span>
+            <span>Section 04 • Problem Tracks & Domains</span>
           </div>
           <h2 className="font-heading gradient-text-cyan" style={{
             fontSize: 'clamp(2rem, 4vw, 3rem)',
             fontWeight: 800,
             marginBottom: '1rem'
           }}>
-            Themes & Problem Tracks
+            Themes & Problem Statements
           </h2>
           <p style={{ fontSize: '1.05rem', color: 'var(--text-muted)' }}>
-            Choose the domain that best aligns with your innovative solution. Pitch your ideas across 6 core tech domains.
+            To ensure fair competition and fresh innovation, all official problem statements and domains will be announced directly on event day.
           </p>
-
-          {/* Interactive Search Bar */}
-          <div style={{
-            marginTop: '2rem',
-            position: 'relative',
-            maxWidth: '520px',
-            margin: '2rem auto 0 auto'
-          }}>
-            <Search size={18} style={{
-              position: 'absolute',
-              left: '1.2rem',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              color: 'var(--cyber-cyan)'
-            }} />
-            <input
-              type="text"
-              placeholder="Search tracks or idea keywords (e.g., healthcare, drones, fraud)..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              style={{
-                width: '100%',
-                padding: '0.85rem 1rem 0.85rem 3rem',
-                background: 'rgba(15, 23, 42, 0.8)',
-                border: '1px solid var(--border-glow)',
-                borderRadius: '12px',
-                color: '#FFFFFF',
-                fontSize: '0.92rem',
-                outline: 'none'
-              }}
-            />
-          </div>
         </div>
 
-        {/* Tracks Grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-          gap: '1.8rem'
+        {/* Central Locked Showcase Card */}
+        <div className="glass-card" style={{
+          maxWidth: '820px',
+          margin: '0 auto',
+          padding: '3rem 2rem',
+          textAlign: 'center',
+          background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(26, 92, 255, 0.08) 100%)',
+          border: '1px solid rgba(255, 184, 0, 0.3)',
+          boxShadow: '0 0 40px rgba(255, 184, 0, 0.08)',
+          borderRadius: '20px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1.5rem'
         }}>
-          {filteredTracks.map((track) => {
-            const IconComponent = iconMap[track.icon] || Cpu;
-            const isSelected = selectedTrack?.id === track.id;
+          {/* Glowing Lock Badge */}
+          <div style={{
+            width: '76px',
+            height: '76px',
+            borderRadius: '20px',
+            background: 'linear-gradient(135deg, rgba(255, 184, 0, 0.2), rgba(255, 87, 34, 0.1))',
+            border: '1px solid rgba(255, 184, 0, 0.4)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'var(--gold-amber)',
+            boxShadow: '0 0 25px rgba(255, 184, 0, 0.25)'
+          }}>
+            <Lock size={36} />
+          </div>
 
-            return (
-              <div
-                key={track.id}
-                className="glass-card"
-                style={{
-                  padding: '2rem',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between',
-                  cursor: 'pointer',
-                  borderColor: isSelected ? 'var(--cyber-cyan)' : 'var(--border-light)',
-                  boxShadow: isSelected ? '0 0 30px var(--neon-cyan-glow)' : 'none'
-                }}
-                onClick={() => setSelectedTrack(isSelected ? null : track)}
-              >
-                <div>
-                  {/* Icon & Badge */}
-                  <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    marginBottom: '1.2rem'
-                  }}>
-                    <div style={{
-                      width: '52px',
-                      height: '52px',
-                      borderRadius: '14px',
-                      background: 'linear-gradient(135deg, rgba(26, 92, 255, 0.2), rgba(0, 200, 255, 0.1))',
-                      border: '1px solid rgba(0, 200, 255, 0.3)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: 'var(--cyber-cyan)'
-                    }}>
-                      <IconComponent size={26} />
-                    </div>
-                    <span style={{
-                      fontSize: '0.72rem',
-                      fontWeight: 700,
-                      color: 'var(--gold-amber)',
-                      background: 'rgba(255, 184, 0, 0.1)',
-                      padding: '0.25rem 0.65rem',
-                      borderRadius: '99px',
-                      border: '1px solid rgba(255, 184, 0, 0.2)'
-                    }}>
-                      TRACK #{track.id.toUpperCase()}
-                    </span>
-                  </div>
+          <h3 className="font-heading" style={{
+            fontSize: 'clamp(1.5rem, 3.5vw, 2.2rem)',
+            fontWeight: 800,
+            color: '#FFFFFF'
+          }}>
+            Domains & Problem Statements Locked
+          </h3>
 
-                  {/* Title & Tagline */}
-                  <h3 style={{
-                    fontSize: '1.25rem',
-                    fontWeight: 700,
-                    color: '#FFFFFF',
-                    marginBottom: '0.3rem'
-                  }}>
-                    {track.title}
-                  </h3>
+          <p style={{
+            fontSize: '1.05rem',
+            color: 'var(--text-muted)',
+            maxWidth: '620px',
+            lineHeight: 1.6,
+            margin: 0
+          }}>
+            The problem statements and specific domain tracks will be <strong style={{ color: 'var(--gold-amber)' }}>revealed live on Event Day</strong>. Register your team now to secure your spot and receive the problem statement packet upon event check-in!
+          </p>
 
-                  <div style={{
-                    fontSize: '0.82rem',
-                    fontWeight: 600,
-                    color: 'var(--cyber-cyan)',
-                    marginBottom: '0.9rem'
-                  }}>
-                    {track.tagline}
-                  </div>
+          {/* Key Details Highlight Box */}
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '1rem',
+            width: '100%',
+            marginTop: '0.5rem'
+          }}>
+            <div style={{
+              background: 'rgba(255, 184, 0, 0.08)',
+              border: '1px solid rgba(255, 184, 0, 0.25)',
+              padding: '0.8rem 1.4rem',
+              borderRadius: '12px',
+              color: 'var(--gold-amber)',
+              fontWeight: 700,
+              fontSize: '0.92rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.6rem'
+            }}>
+              <Calendar size={18} />
+              <span>Reveal Date: September 30th, 2026</span>
+            </div>
 
-                  {/* Description */}
-                  <p style={{
-                    fontSize: '0.9rem',
-                    color: 'var(--text-muted)',
-                    lineHeight: 1.5,
-                    marginBottom: '1.2rem'
-                  }}>
-                    {track.description}
-                  </p>
+            <div style={{
+              background: 'rgba(0, 200, 255, 0.08)',
+              border: '1px solid rgba(0, 200, 255, 0.25)',
+              padding: '0.8rem 1.4rem',
+              borderRadius: '12px',
+              color: 'var(--cyber-cyan)',
+              fontWeight: 700,
+              fontSize: '0.92rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.6rem'
+            }}>
+              <Sparkles size={18} />
+              <span>Venue: GST Auditorium, SIES GST</span>
+            </div>
+          </div>
 
-                  {/* Sample Topics list */}
-                  <div style={{
-                    background: 'rgba(255,255,255,0.02)',
-                    borderRadius: '10px',
-                    padding: '0.8rem 1rem',
-                    border: '1px dashed rgba(255,255,255,0.08)'
-                  }}>
-                    <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-dim)', marginBottom: '0.4rem' }}>
-                      SAMPLE IDEA AREAS:
-                    </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
-                      {track.sampleTopics.map((topic, tidx) => (
-                        <span key={tidx} style={{
-                          fontSize: '0.75rem',
-                          color: 'var(--text-main)',
-                          background: 'rgba(255,255,255,0.05)',
-                          padding: '0.2rem 0.55rem',
-                          borderRadius: '6px'
-                        }}>
-                          • {topic}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Footer Action */}
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  marginTop: '1.5rem',
-                  paddingTop: '1rem',
-                  borderTop: '1px solid rgba(255,255,255,0.05)',
-                  fontSize: '0.85rem',
-                  fontWeight: 600,
-                  color: 'var(--cyber-cyan)'
-                }}>
-                  <span>Select Track for Registration</span>
-                  <ChevronRight size={16} />
-                </div>
-              </div>
-            );
-          })}
+          <a
+            href={eventConfig.googleFormLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+            style={{
+              marginTop: '1rem',
+              padding: '0.9rem 2.2rem',
+              fontSize: '1rem',
+              textDecoration: 'none'
+            }}
+          >
+            Register Team Now
+          </a>
         </div>
 
       </div>
     </section>
   );
 };
+

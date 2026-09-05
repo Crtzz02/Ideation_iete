@@ -55,38 +55,14 @@ export const Navbar = () => {
             textDecoration: 'none'
           }}
         >
-          {/* SIES GST Logo Container */}
-          <div
-            style={{
-              height: '42px',
-              padding: '2px 6px',
-              background: '#FFFFFF',
-              borderRadius: '8px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-          >
-            <img
-              src="/sieslogo.png"
-              alt="SIES GST"
-              style={{
-                height: '100%',
-                width: 'auto',
-                objectFit: 'contain'
-              }}
-            />
-          </div>
-
           {/* IETE Logo Container */}
           <div
             style={{
-               width: '64px',
-               height: '64px',
+               width: '46px',
+               height: '46px',
                display: 'flex',
                alignItems: 'center',
                justifyContent: 'center',
-               margin: '0 auto 1rem auto',
                filter: 'drop-shadow(0 0 12px rgba(0, 200, 255, 0.45))'
             }}
           >

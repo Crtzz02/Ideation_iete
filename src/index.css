@@ -96,13 +96,29 @@ body {
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-light);
   border-radius: 16px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
 }
 
 .glass-card:hover {
-  border-color: rgba(0, 200, 255, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(0, 200, 255, 0.15);
-  transform: translateY(-2px);
+  border-color: rgba(0, 200, 255, 0.4);
+  box-shadow: 0 15px 35px -5px rgba(0, 200, 255, 0.25);
+  transform: translateY(-6px) scale(1.02);
+}
+
+.glass-card:active {
+  transform: scale(0.97) translateY(0);
+  box-shadow: 0 4px 15px rgba(0, 200, 255, 0.2);
+}
+
+.prize-card-gold {
+  border-color: rgba(255, 184, 0, 0.5) !important;
+}
+
+.prize-card-gold:hover {
+  border-color: rgba(255, 184, 0, 0.85) !important;
+  box-shadow: 0 20px 45px rgba(255, 184, 0, 0.35) !important;
+  transform: translateY(-8px) scale(1.04) !important;
 }
 
 .glass-nav {
@@ -137,6 +153,10 @@ body {
   background: linear-gradient(135deg, #FFC72C 0%, var(--gold-amber) 100%);
 }
 
+.btn-primary:active {
+  transform: scale(0.96) translateY(0);
+}
+
 .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -160,6 +180,10 @@ body {
   color: var(--text-white);
   box-shadow: 0 0 20px var(--neon-cyan-glow);
   transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: scale(0.96) translateY(0);
 }
 
 .badge-tag {

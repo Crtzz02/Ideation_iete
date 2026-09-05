@@ -11,22 +11,22 @@ export const eventConfig = {
   approvedTaglineNotice: "[TEMP TAGLINE] Official committee head tagline will update here.",
   
   // Event Key Meta Information
-  eventDateDisplay: "October 24 - 25, 2026",
+  eventDateDisplay: "September 30th, 2026",
   eventTimeDisplay: "09:00 AM - 05:00 PM IST",
-  eventVenueDisplay: "Main Campus Auditorium & Online Hybrid",
+  eventVenueDisplay: "GST Auditorium, SIES GST, Nerul",
   eligibilityDisplay: "Open to All Engineering, Tech & Science Students",
   
   // Target date for live countdown timer (ISO format: YYYY-MM-DDTHH:mm:ss)
-  countdownTarget: "2026-10-24T09:00:00+05:30",
+  countdownTarget: "2026-09-30T09:00:00+05:30",
   
-  // Google Form Link (Will be updated by head; if set to fallback mode, site uses built-in form)
-  googleFormLink: "https://forms.google.com/sample-ideation-registration-link",
-  useExternalGoogleForm: false, // Set to true if committee prefers redirecting directly to Google Form
+  // Official External Registration Links
+  unstopLink: "https://unstop.com/o/3B4bZaP?utm_medium=Share&utm_source=ietesie2631&utm_campaign=Online_coding_challenge",
+  googleFormLink: "https://forms.cloud.microsoft/r/qZgBQRDG3g",
 
   // Notice for team / admin preview
   adminNotice: {
-    enabled: true,
-    message: "⚡ Temporary Event Data Loaded — Update real dates, prizes, tracks, rules, FAQs & Google Form link in src/config/eventConfig.js once received from Committee Head."
+    enabled: false,
+    message: ""
   },
 
   // Section 03: About The Event
@@ -38,62 +38,56 @@ export const eventConfig = {
       "Open to all branches and years. Turn your draft into reality, earn national recognition, and compete for ₹50,000+ in prizes and incubation support."
     ],
     highlights: [
-      { number: "₹50,000+", label: "Prize Pool & Grants" },
-      { number: "6+", label: "Innovative Problem Tracks" },
-      { number: "500+", label: "Expected Innovators" },
-      { number: "1:1", label: "Industry Mentorship" }
+      { number: "₹30,000+", label: "Prize Pool" },
+      { number: "Exciting", label: "Goodies" },
+      { number: "National", label: "Participation Certificates" }
     ]
   },
 
   // Section 04: Themes & Problem Tracks
+  tracksNotice: "🔒 Problem Statements (PS) will be revealed live on Event Day (September 30th, 2026).",
   tracks: [
     {
       id: "ai-health",
       icon: "Activity",
       title: "Healthcare & Biotech AI",
       tagline: "Smart Diagnostics & Patient Care",
-      description: "Pioneering AI algorithms, wearable health telemetry, early-detection diagnostics, and bio-tech solutions for accessible medical infrastructure.",
-      sampleTopics: ["AI early symptom detection", "Remote patient monitoring", "Smart prosthetic control", "Genetic data analytics"]
+      description: "Pioneering AI algorithms, wearable health telemetry, early-detection diagnostics, and bio-tech solutions for accessible medical infrastructure."
     },
     {
       id: "edtech-ai",
       icon: "GraduationCap",
       title: "Smart Education & EdTech",
       tagline: "Adaptive & Immersive Learning",
-      description: "Transforming learning experiences with personalized AI tutors, immersive AR/VR labs, accessibility tools, and automated skill mapping.",
-      sampleTopics: ["Adaptive learning path generators", "VR science laboratory simulators", "AI anti-cheat assessment tools"]
+      description: "Transforming learning experiences with personalized AI tutors, immersive AR/VR labs, accessibility tools, and automated skill mapping."
     },
     {
       id: "social-good",
       icon: "Globe",
       title: "AI for Social Good & Green Tech",
       tagline: "Sustainability & Climate Resilience",
-      description: "Addressing global societal challenges—clean energy optimization, carbon footprint tracking, disaster relief robotics, and smart agriculture.",
-      sampleTopics: ["Precision agriculture & crop disease AI", "Smart water distribution management", "Renewable energy grid forecasting"]
+      description: "Addressing global societal challenges—clean energy optimization, carbon footprint tracking, disaster relief robotics, and smart agriculture."
     },
     {
       id: "robotics-iot",
       icon: "Cpu",
       title: "Automation, Robotics & IoT",
       tagline: "Hardware × Software Fusion",
-      description: "Autonomous micro-robots, IoT smart sensors, industrial automation, edge computing, and sensor fusion applications.",
-      sampleTopics: ["Autonomous drone surveillance", "Smart factory defect detection", "Edge AI for embedded devices"]
+      description: "Autonomous micro-robots, IoT smart sensors, industrial automation, edge computing, and sensor fusion applications."
     },
     {
       id: "smart-cities",
       icon: "Building2",
       title: "Smart Cities & Infrastructure",
       tagline: "Intelligent Urban Mobility",
-      description: "Next-gen urban planning, real-time traffic signal optimization, intelligent waste management, and green building telemetry.",
-      sampleTopics: ["Traffic bottleneck prediction", "Smart municipal waste collection", "EV charging network optimization"]
+      description: "Next-gen urban planning, real-time traffic signal optimization, intelligent waste management, and green building telemetry."
     },
     {
       id: "fintech-web3",
       icon: "ShieldCheck",
       title: "FinTech & Cybersecurity",
       tagline: "Secure Digital Financial Systems",
-      description: "AI-driven fraud prevention, biometric authorization, decentralized privacy protocols, and secure transaction verification.",
-      sampleTopics: ["Real-time transaction fraud detection", "Zero-knowledge identity verification", "Cyber threat hunting bots"]
+      description: "AI-driven fraud prevention, biometric authorization, decentralized privacy protocols, and secure transaction verification."
     }
   ],
 
@@ -101,50 +95,26 @@ export const eventConfig = {
   timeline: [
     {
       step: "01",
-      date: "September 15, 2026",
+      date: "September 5, 2026",
       time: "10:00 AM",
-      title: "Registration & Abstract Submission Opens",
-      description: "Submit your team details and a 2-page idea abstract outlining problem statement, proposed methodology, and key impact.",
-      status: "upcoming"
+      title: "Registration Opens",
+      description: "Registration opens for all student teams.",
+      status: "completed"
     },
     {
       step: "02",
-      date: "October 10, 2026",
+      date: "September 24, 2026",
       time: "11:59 PM",
       title: "Registration Deadline",
-      description: "Final deadline to register team members and submit initial presentation abstracts. Late entries will not be accepted.",
+      description: "Final date to submit team registration.",
       status: "upcoming"
     },
     {
       step: "03",
-      date: "October 15, 2026",
-      time: "06:00 PM",
-      title: "Shortlisted Teams Announced",
-      description: "Top selected entries move forward to the preparation stage and receive jury feedback for pitch deck refining.",
-      status: "upcoming"
-    },
-    {
-      step: "04",
-      date: "October 18, 2026",
-      time: "04:00 PM",
-      title: "Mentorship & Pitch Deck Masterclass",
-      description: "Exclusive online interactive session with pitch experts on slide design, business viability, and presentation delivery.",
-      status: "upcoming"
-    },
-    {
-      step: "05",
-      date: "October 24, 2026",
-      time: "09:30 AM",
+      date: "September 30, 2026",
+      time: "09:00 AM",
       title: "Main Event: Pitch Presentation Day",
-      description: "Live 8-minute pitch + 4-minute Q&A with judge panel. Demonstrations, prototypes, and slides evaluated in person/online.",
-      status: "upcoming"
-    },
-    {
-      step: "06",
-      date: "October 25, 2026",
-      time: "03:00 PM",
-      title: "Grand Finale & Prize Distribution",
-      description: "Valedictory ceremony, keynote address by industry leaders, award ceremony, and certificate distribution.",
+      description: "Live pitch presentation at GST Auditorium, SIES GST, Nerul.",
       status: "upcoming"
     }
   ],
@@ -160,9 +130,7 @@ export const eventConfig = {
         perks: [
           "Official Champion Trophy & Medals",
           "Certificate of Distinction from IETE",
-          "6-Month Incubation & Patent Assistance",
-          "Direct Mentorship with Industry CTOs",
-          "Featured Spotlight in IETE Tech Magazine"
+          "Exciting Goodies"
         ],
         highlightColor: "gold"
       },
@@ -174,8 +142,7 @@ export const eventConfig = {
         perks: [
           "Runner-Up Trophy & Medals",
           "Certificate of Distinction from IETE",
-          "3-Month Incubation Mentorship",
-          "Voucher Credits for Cloud Computing"
+          "Exciting Goodies"
         ],
         highlightColor: "silver"
       },
@@ -187,25 +154,15 @@ export const eventConfig = {
         perks: [
           "Second Runner-Up Trophy & Medals",
           "Certificate of Distinction from IETE",
-          "Tech Goodies & Swag Kit"
+          "Exciting Goodies"
         ],
         highlightColor: "bronze"
       }
     ],
     specialCategory: [
       {
-        title: "Most Innovative Idea Award",
-        reward: "₹5,000 + Trophy",
-        description: "Awarded to the team demonstrating the highest degree of novelty and creative technical approach."
-      },
-      {
-        title: "Best Pitch & Presentation",
-        reward: "₹5,000 + Trophy",
-        description: "Awarded for exceptional slide design, public speaking, structured Q&A defense, and clarity."
-      },
-      {
         title: "All Participants",
-        reward: "National E-Certificates",
+        reward: "Participation Certificates",
         description: "Official verified IETE Certificate of Participation awarded to every registered team that presents."
       }
     ]
@@ -269,7 +226,7 @@ export const eventConfig = {
     },
     {
       question: "Is there any registration fee?",
-      answer: "No! Registration for IDEATION '26 is completely FREE for all student teams."
+      answer: "Fees: Non-IETE Members (Team of 3: ₹400, Team of 4: ₹450), IETE Members (Team of 3: ₹200, Team of 4: ₹250)."
     },
     {
       question: "Does my idea have to be fully coded or built?",
@@ -286,10 +243,6 @@ export const eventConfig = {
     {
       question: "Will all participants receive certificates?",
       answer: "Yes! All verified participants who complete their presentation will receive an official digital Certificate of Participation backed by the IETE student forum."
-    },
-    {
-      question: "What happens if we receive new updates from the committee?",
-      answer: "The site is built dynamically. Updates to tracks, deadlines, prizes, and links will reflect automatically as soon as the committee head updates the configuration file."
     }
   ],
 
@@ -297,26 +250,25 @@ export const eventConfig = {
   coordinators: [
     {
       name: "Shlok",
-      phone: "+91 7678016216",
-      
-      
+      role: "Event Coordinator",
+      phone: "+91 76780 16216",
+      whatsapp: "https://wa.me/917678016216",
+      avatarBg: "linear-gradient(135deg, #1A5CFF, #00C8FF)"
     },
     {
       name: "Ayaan",
-      
-      phone: "+91 8779792225",
-     
-    },
-   
+      role: "Event Coordinator",
+      phone: "+91 87797 92225",
+      whatsapp: "https://wa.me/918779792225",
+      avatarBg: "linear-gradient(135deg, #00C8FF, #9D4EDD)"
+    }
   ],
 
-  // Social handles & Footer Links
+  // Official Email & Social handles
+  officialEmail: "iete-council@siesgst.ac.in",
   socialLinks: {
-    instagram: "https://instagram.com/iete_student_forum",
-    linkedin: "https://linkedin.com/company/iete-student-chapter",
-    twitter: "https://twitter.com/iete_official",
-    github: "https://github.com/iete-web-team",
-    youtube: "https://youtube.com/@iete_events"
+    instagram: "https://www.instagram.com/iete_siesgst?igsi=OWZyMDZra2FsZGR1",
+    linkedin: "https://www.linkedin.com/company/iete-siesgst/"
   },
 
   footer: {

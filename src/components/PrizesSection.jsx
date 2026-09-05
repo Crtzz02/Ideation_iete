@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, Award, Gift, Sparkles, CheckCircle } from 'lucide-react';
+import { Trophy, Award, CheckCircle } from 'lucide-react';
 import { eventConfig } from '../config/eventConfig';
 
 export const PrizesSection = () => {
@@ -24,7 +24,7 @@ export const PrizesSection = () => {
             Prizes & Cash Awards
           </h2>
           <p style={{ fontSize: '1.05rem', color: 'var(--text-muted)' }}>
-            Compete for over <strong>₹50,000</strong> in cash rewards, incubation support, certificates, and trophies.
+            Compete for our official prize pool of cash rewards, trophies, certificates, and exciting goodies.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export const PrizesSection = () => {
             return (
               <div
                 key={prize.rank}
-                className="glass-card"
+                className={`glass-card ${isGold ? 'prize-card-gold' : ''}`}
                 style={{
                   padding: '2.5rem 2rem',
                   display: 'flex',
@@ -70,9 +70,7 @@ export const PrizesSection = () => {
                   justifyContent: 'space-between',
                   position: 'relative',
                   border: `1px solid ${cardBorder}`,
-                  background: gradientBg,
-                  transform: isGold ? 'scale(1.04)' : 'none',
-                  boxShadow: isGold ? '0 15px 40px rgba(255, 184, 0, 0.2)' : 'none'
+                  background: gradientBg
                 }}
               >
                 <div>
@@ -113,13 +111,13 @@ export const PrizesSection = () => {
                   </div>
 
                   {/* Perks list */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                     {prize.perks.map((perk, pidx) => (
                       <div key={pidx} style={{
                         display: 'flex',
                         alignItems: 'flex-start',
                         gap: '0.6rem',
-                        fontSize: '0.9rem',
+                        fontSize: '0.92rem',
                         color: 'var(--text-main)'
                       }}>
                         <CheckCircle size={16} style={{ color: 'var(--cyber-cyan)', flexShrink: 0, marginTop: '0.15rem' }} />
@@ -127,17 +125,6 @@ export const PrizesSection = () => {
                       </div>
                     ))}
                   </div>
-                </div>
-
-                <div style={{
-                  marginTop: '2rem',
-                  paddingTop: '1rem',
-                  borderTop: '1px solid rgba(255,255,255,0.08)',
-                  fontSize: '0.8rem',
-                  color: 'var(--text-muted)',
-                  textAlign: 'center'
-                }}>
-                  Official Trophy + Award Certificate
                 </div>
               </div>
             );
