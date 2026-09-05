@@ -296,7 +296,7 @@ export const eventConfig = {
   // Section 10: Coordinator Contacts & Social Links
   coordinators: [
     {
-      name: "Sholk",
+      name: "Shlok",
       phone: "+91 7678016216",
       
       
