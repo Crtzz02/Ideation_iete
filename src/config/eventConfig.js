@@ -156,7 +156,7 @@ export const eventConfig = {
         rank: 1,
         title: "1st Place Winner",
         badge: "🥇 Champion",
-        amount: "₹25,000",
+        amount: "₹15,000",
         perks: [
           "Official Champion Trophy & Medals",
           "Certificate of Distinction from IETE",
@@ -170,7 +170,7 @@ export const eventConfig = {
         rank: 2,
         title: "2nd Place Runner-Up",
         badge: "🥈 First Runner-Up",
-        amount: "₹15,000",
+        amount: "₹10,000",
         perks: [
           "Runner-Up Trophy & Medals",
           "Certificate of Distinction from IETE",
@@ -183,7 +183,7 @@ export const eventConfig = {
         rank: 3,
         title: "3rd Place Runner-Up",
         badge: "🥉 Second Runner-Up",
-        amount: "₹10,000",
+        amount: "₹5,000",
         perks: [
           "Second Runner-Up Trophy & Medals",
           "Certificate of Distinction from IETE",
@@ -296,29 +296,18 @@ export const eventConfig = {
   // Section 10: Coordinator Contacts & Social Links
   coordinators: [
     {
-      name: "Aarav Sharma",
-      role: "Student President & Lead Coordinator",
-      phone: "+91 98765 43210",
-      email: "aarav.sharma@iete-student.org",
-      whatsapp: "https://wa.me/919876543210",
-      avatarBg: "linear-gradient(135deg, #1A5CFF, #00C8FF)"
+      name: "Sholk",
+      phone: "+91 7678016216",
+      
+      
     },
     {
-      name: "Ananya Patel",
-      role: "Event Operations Lead",
-      phone: "+91 87654 32109",
-      email: "ananya.patel@iete-student.org",
-      whatsapp: "https://wa.me/918765432109",
-      avatarBg: "linear-gradient(135deg, #00C8FF, #9D4EDD)"
+      name: "Ayaan",
+      
+      phone: "+91 8779792225",
+     
     },
-    {
-      name: "Rohan Verma",
-      role: "Technical & Query Head",
-      phone: "+91 76543 21098",
-      email: "rohan.verma@iete-student.org",
-      whatsapp: "https://wa.me/917654321098",
-      avatarBg: "linear-gradient(135deg, #FFB800, #FF5722)"
-    }
+   
   ],
 
   // Social handles & Footer Links
