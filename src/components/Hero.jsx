@@ -121,7 +121,7 @@ export const Hero = () => {
           gap: '1.2rem',
           marginBottom: '3.5rem'
         }}>
-          <a href="#register" className="btn-primary" style={{ padding: '1rem 2.4rem', fontSize: '1.05rem' }}>
+          <a href="https://unstop.com/o/3B4bZaP?utm_medium=Share&utm_source=ietesie2631&utm_campaign=Online_coding_challenge" className="btn-primary" style={{ padding: '1rem 2.4rem', fontSize: '1.05rem' }}>
             Register Now
             <ArrowRight size={20} />
           </a>
