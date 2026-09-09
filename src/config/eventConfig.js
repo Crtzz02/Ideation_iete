@@ -20,7 +20,7 @@ export const eventConfig = {
   countdownTarget: "2026-09-30T09:00:00+05:30",
   
   // Official External Registration Links
-  unstopLink: "https://unstop.com/o/3B4bZaP?utm_medium=Share&utm_source=ietesie2631&utm_campaign=Online_coding_challenge",
+  unstopLink: "https://unstop.com/hackathons/ideation26-sies-graduate-school-of-technology-navi-mumbai-maharashtra-1749736",
   googleFormLink: "https://forms.cloud.microsoft/r/qZgBQRDG3g",
 
   // Notice for team / admin preview
@@ -103,7 +103,7 @@ export const eventConfig = {
     },
     {
       step: "02",
-      date: "September 24, 2026",
+      date: "September 26, 2026",
       time: "11:59 PM",
       title: "Registration Deadline",
       description: "Final date to submit team registration.",
@@ -265,7 +265,7 @@ export const eventConfig = {
   ],
 
   // Official Email & Social handles
-  officialEmail: "iete-council@siesgst.ac.in",
+  officialEmail: "iiete-council@sies.edu.in",
   socialLinks: {
     instagram: "https://www.instagram.com/iete_siesgst?igsi=OWZyMDZra2FsZGR1",
     linkedin: "https://www.linkedin.com/company/iete-siesgst/"
@@ -273,7 +273,7 @@ export const eventConfig = {
 
   footer: {
     address: "IETE Student Chapter, Department of Electronics & Telecommunication Engineering",
-    copyright: "© 2026 IDEATION - IETE. All rights reserved.",
+    copyright: "© 2026 IDEATION - IETE WEB TEAM. All rights reserved.",
     tagline: "Empowering Next-Generation Tech Innovators"
   }
 };
