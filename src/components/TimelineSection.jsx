@@ -21,10 +21,10 @@ export const TimelineSection = () => {
             fontWeight: 800,
             marginBottom: '1rem'
           }}>
-            Timeline & Key Milestones
+            Event Timeline
           </h2>
           <p style={{ fontSize: '1.05rem', color: 'var(--text-muted)' }}>
-            Follow the journey from initial abstract submission to the Grand Finale pitch day.
+            Official Event Day schedule on September 30th from registration to valedictory.
           </p>
         </div>
 

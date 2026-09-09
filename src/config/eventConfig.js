@@ -95,75 +95,78 @@ export const eventConfig = {
   timeline: [
     {
       step: "01",
-      date: "September 5, 2026",
-      time: "10:00 AM",
-      title: "Registration Opens",
-      description: "Registration opens for all student teams.",
-      status: "completed"
+      date: "September 30, 2026",
+      time: "8:30 AM",
+      title: "Registration of Participants",
+      description: "Reporting and check-in for all participating teams."
     },
     {
       step: "02",
-      date: "September 26, 2026",
-      time: "11:59 PM",
-      title: "Registration Deadline",
-      description: "Final date to submit team registration.",
-      status: "upcoming"
+      date: "September 30, 2026",
+      time: "9:15 AM",
+      title: "Inauguration Ceremony",
+      description: "Official opening ceremony and welcome keynotes."
     },
     {
       step: "03",
       date: "September 30, 2026",
-      time: "09:00 AM",
-      title: "Main Event: Pitch Presentation Day",
-      description: "Live pitch presentation at GST Auditorium, SIES GST, Nerul.",
-      status: "upcoming"
+      time: "10:30 AM",
+      title: "Ideathon Session",
+      description: "Problem Statements release + Brainstorming phase."
+    },
+    {
+      step: "04",
+      date: "September 30, 2026",
+      time: "12:30 PM",
+      title: "Lunch Break",
+      description: "Lunch provided for all participants."
+    },
+    {
+      step: "05",
+      date: "September 30, 2026",
+      time: "1:15 PM",
+      title: "Pitching Phase",
+      description: "Team presentations and evaluation by jury panel."
+    },
+    {
+      step: "06",
+      date: "September 30, 2026",
+      time: "4:00 PM",
+      title: "Tea Break",
+      description: "Networking and refreshment break."
+    },
+    {
+      step: "07",
+      date: "September 30, 2026",
+      time: "4:30 PM",
+      title: "Valedictory & Prize Distribution",
+      description: "Closing ceremony and prize distribution."
     }
   ],
 
   // Section 06: Prizes & Recognition
   prizes: {
-    podium: [
+    cards: [
       {
-        rank: 1,
-        title: "1st Place Winner",
-        badge: "🥇 Champion",
-        amount: "₹15,000",
-        perks: [
-          "Official Champion Trophy & Medals",
-          "Certificate of Distinction from IETE",
-          "Exciting Goodies"
-        ],
-        highlightColor: "gold"
+        id: "cash-prize",
+        type: "cash",
+        amount: "₹30,000",
+        cashLabel: "CASH",
+        title: "Prize pool"
       },
       {
-        rank: 2,
-        title: "2nd Place Runner-Up",
-        badge: "🥈 First Runner-Up",
-        amount: "₹10,000",
-        perks: [
-          "Runner-Up Trophy & Medals",
-          "Certificate of Distinction from IETE",
-          "Exciting Goodies"
-        ],
-        highlightColor: "silver"
+        id: "hampers",
+        type: "kind",
+        title: "Hampers & Coupons",
+        subtitle: "Prize in kind",
+        badge: "Certificate"
       },
       {
-        rank: 3,
-        title: "3rd Place Runner-Up",
-        badge: "🥉 Second Runner-Up",
-        amount: "₹5,000",
-        perks: [
-          "Second Runner-Up Trophy & Medals",
-          "Certificate of Distinction from IETE",
-          "Exciting Goodies"
-        ],
-        highlightColor: "bronze"
-      }
-    ],
-    specialCategory: [
-      {
-        title: "All Participants",
-        reward: "Participation Certificates",
-        description: "Official verified IETE Certificate of Participation awarded to every registered team that presents."
+        id: "participation",
+        type: "kind",
+        title: "Participation Certificate",
+        subtitle: "Prize in kind",
+        badge: "Certificate"
       }
     ]
   },
